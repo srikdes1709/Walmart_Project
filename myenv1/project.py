@@ -11,7 +11,7 @@ import pandas as pd
 import pymysql
 from sqlalchemy import create_engine
 
-df = pd.read_csv('Walmart.csv', encoding_errors='ignore')
+df = pd.read_csv('/Users/srikardesikan/Desktop/Trainings/Walmart_Project/myenv1/Walmart.csv', encoding_errors='ignore')
 df.shape
 df.head
 df.describe()
@@ -36,7 +36,7 @@ df.columns
 df['Total'] = df['unit_price'] * df['quantity']
 df.head()
 
-df.to_csv('walmart_clean_data.csv', index=False)
+df.to_csv('walmart_clean_data1.csv', index=False)
 
 #MySQL connection
 engine_mysql = create_engine("mysql+pymysql://root:Suk$ik9497@localhost:3306/Walmart_db")
